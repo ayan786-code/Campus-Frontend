@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Home Page -->
+    <url>
+        <loc>https://founddesk.netlify.app/index.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Login Page -->
+    <url>
+        <loc>https://founddesk.netlify.app/login.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Register Page -->
+    <url>
+        <loc>https://founddesk.netlify.app/register.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Add Item Page -->
+    <url>
+        <loc>https://founddesk.netlify.app/add-item.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Item Details Page -->
+    <url>
+        <loc>https://founddesk.netlify.app/item-details.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Profile Page -->
+    <url>
+        <loc>https://founddesk.netlify.app/profile.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+</urlset>
