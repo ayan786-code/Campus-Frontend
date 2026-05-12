@@ -50,6 +50,12 @@
   min-height: 320px;
   border-radius: var(--radius);
   padding: 1.75rem;
+  background: linear-gradient(180deg, #151b2d 0%, #1f2a44 100%);
+  box-shadow: 0 18px 40px rgba(15, 24, 48, 0.45);
+  border: 1px solid rgba(100, 129, 204, 0.2);
+}
+
+body.dark-theme .hero-card {
   background: linear-gradient(180deg, #ffffff 0%, #dbe6ff 100%);
   box-shadow: var(--shadow);
   border: 1px solid rgba(33, 80, 160, 0.08);
@@ -57,13 +63,27 @@
 
 .hero-card-top {
   font-size: 0.95rem;
-  color: var(--text-muted);
+  color: #96a8d2;
   margin-bottom: 1.5rem;
+}
+
+body.dark-theme .hero-card-top {
+  color: var(--text-muted);
 }
 
 .hero-card-content h3,
 .hero-card-content p {
   margin: 0;
+  color: #eef4ff;
+}
+
+body.dark-theme .hero-card-top {
+  color: #55617f;
+}
+
+body.dark-theme .hero-card-content h3,
+body.dark-theme .hero-card-content p {
+  color: #1f2937;
 }
 
 .search-panel {
@@ -81,7 +101,7 @@
   border-radius: 999px;
   border: 1px solid rgba(33, 80, 160, 0.16);
   padding: 1rem 1.1rem;
-  background: #ffffff;
+  background: var(--surface);
   color: var(--text);
 }
 
@@ -161,7 +181,7 @@
 .recent-card {
   border: 1px solid rgba(33, 80, 160, 0.08);
   padding: 1.35rem;
-  background: #f5f9ff;
+  background: var(--surface-strong);
 }
 
 .recent-card h3 {

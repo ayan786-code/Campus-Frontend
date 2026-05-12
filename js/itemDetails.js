@@ -6,6 +6,7 @@ import {
   resolveItemImage,
   formatDate,
 } from "./utils.js";
+import { initAuth, initTheme } from "./auth.js";
 
 const detailsContainer = document.querySelector("#itemDetails");
 
@@ -173,5 +174,9 @@ async function loadItem() {
 // Init
 window.addEventListener(
   "DOMContentLoaded",
-  loadItem
+  () => {
+    initAuth();
+    initTheme();
+    loadItem();
+  }
 );

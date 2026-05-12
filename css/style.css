@@ -14,6 +14,30 @@
   --radius-sm: 14px;
 }
 
+body.dark-theme {
+  --bg: #090d16;
+  --surface: #111827;
+  --surface-strong: #141d2f;
+  --surface-muted: #1f293b;
+  --text: #e7f1ff;
+  --text-muted: #9bb5db;
+  --primary: #64b5ff;
+  --primary-light: #8cc9ff;
+  --secondary: #7c9cff;
+  --border: rgba(100, 181, 255, 0.18);
+  --shadow: 0 22px 60px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(180deg, #090d16 0%, #0d1424 100%);
+}
+
+body.dark-theme .site-header {
+  background: rgba(11, 18, 34, 0.9);
+  border-bottom: 1px solid rgba(100, 181, 255, 0.14);
+}
+
+body.dark-theme .loader-overlay {
+  background: rgba(8, 13, 24, 0.8);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -26,7 +50,7 @@ body {
   margin: 0;
   min-height: 100%;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: linear-gradient(180deg, #eef5ff 0%, #f7fbff 100%);
+  background: var(--bg);
   color: var(--text);
 }
 
@@ -74,6 +98,11 @@ button {
   top: 0;
   z-index: 20;
   border-bottom: 1px solid rgba(33, 80, 160, 0.08);
+}
+
+body.dark-theme .site-header {
+  background: rgba(11, 18, 34, 0.9);
+  border-bottom: 1px solid rgba(100, 181, 255, 0.14);
 }
 
 .navbar {
@@ -173,7 +202,7 @@ button {
   background: var(--surface);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  border: 1px solid rgba(33, 80, 160, 0.08);
+  border: 1px solid var(--border);
 }
 
 .section-header {

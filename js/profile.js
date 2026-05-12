@@ -1,6 +1,6 @@
 import { API_URL } from "./config.js";
 import { fetchJson, showToast, showLoader, hideLoader, resolveItemImage, formatDate, authHeaders } from "./utils.js";
-import { requireAuth, getCurrentUser } from "./auth.js";
+import { requireAuth, getCurrentUser, initAuth, initTheme } from "./auth.js";
 
 const profileName = document.querySelector("#userName");
 const profileEmail = document.querySelector("#userEmail");
@@ -168,4 +168,8 @@ async function loadProfile() {
   }
 }
 
-window.addEventListener("DOMContentLoaded", loadProfile);
+window.addEventListener("DOMContentLoaded", () => {
+  initAuth();
+  initTheme();
+  loadProfile();
+});

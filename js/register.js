@@ -1,5 +1,6 @@
 import { API_URL } from "./config.js";
 import { fetchJson, showToast, showLoader, hideLoader } from "./utils.js";
+import { initAuth, initTheme } from "./auth.js";
 
 const form = document.querySelector("#registerForm");
 const messageBox = document.querySelector("#formMessage");
@@ -40,3 +41,8 @@ async function handleRegister(event) {
 if (form) {
   form.addEventListener("submit", handleRegister);
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  initAuth();
+  initTheme();
+});

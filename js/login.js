@@ -1,5 +1,6 @@
 import { API_URL } from "./config.js";
 import { fetchJson, setToken, showToast, showLoader, hideLoader } from "./utils.js";
+import { initAuth, initTheme } from "./auth.js";
 
 const form = document.querySelector("#loginForm");
 const messageBox = document.querySelector("#formMessage");
@@ -41,3 +42,8 @@ async function handleLogin(event) {
 if (form) {
   form.addEventListener("submit", handleLogin);
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  initAuth();
+  initTheme();
+});

@@ -2,13 +2,14 @@
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background: linear-gradient(180deg, #eef5ff 0%, #f9fbff 100%);
+  background: var(--bg);
 }
 
 .auth-card {
   max-width: 680px;
   margin: 2.5rem auto;
   padding: 2.25rem;
+  background: var(--surface);
 }
 
 .auth-intro {
@@ -55,7 +56,7 @@
 .form-group textarea,
 .form-group select {
   width: 100%;
-  background: #f8fbff;
+  background: var(--surface-strong);
   border: 1px solid rgba(33, 80, 160, 0.14);
   border-radius: 14px;
   padding: 1rem 1.1rem;
@@ -79,7 +80,7 @@
 .image-preview {
   min-height: 170px;
   border-radius: 16px;
-  background: #eef6ff;
+  background: var(--surface-strong);
   border: 1px dashed rgba(33, 80, 160, 0.2);
   padding: 1rem;
   display: flex;
@@ -90,7 +91,6 @@
   background-size: cover;
   background-position: center;
 }
-
 .form-message {
   color: #d63447;
   min-height: 1.25rem;

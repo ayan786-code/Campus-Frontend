@@ -1,5 +1,6 @@
 import { API_URL } from "./config.js";
 import { fetchJson, showToast, showLoader, hideLoader, resolveItemImage, formatDate } from "./utils.js";
+import { initAuth, initTheme } from "./auth.js";
 
 const searchInput = document.querySelector("#searchInput");
 const categoryFilter = document.querySelector("#categoryFilter");
@@ -114,4 +115,8 @@ if (categoryFilter) {
   categoryFilter.addEventListener("change", loadItems);
 }
 
-window.addEventListener("DOMContentLoaded", loadItems);
+window.addEventListener("DOMContentLoaded", () => {
+  initAuth();
+  initTheme();
+  loadItems();
+});
